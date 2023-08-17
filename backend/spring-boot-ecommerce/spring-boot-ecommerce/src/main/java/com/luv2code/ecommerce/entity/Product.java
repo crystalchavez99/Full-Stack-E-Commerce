@@ -1,12 +1,10 @@
 package com.luv2code.ecommerce.entity;
 
-import javax.persistence.*;
-
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedDate;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -30,7 +28,7 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
 
     @Column(name = "unit_price")
@@ -45,13 +43,11 @@ public class Product {
     @Column(name = "units_in_stock")
     private int unitsInStock;
 
-    @Column(name="date_created")
+    @Column(name = "date_created")
     @CreationTimestamp
     private Date dateCreated;
 
     @Column(name = "last_updated")
     @UpdateTimestamp
     private Date lastUpdated;
-
-
 }
